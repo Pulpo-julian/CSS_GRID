@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: 
+    radial-gradient(black 3px, transparent 4px),
+    radial-gradient(black 3px, transparent 4px),
+    linear-gradient(#fff 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+  #fff;
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    font-family: 'Manjari', sans-serif;
+}
+
+/* HEADER */
+
+.title h1 {
+    padding: 20px 0;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 2.9em;
+    text-transform: uppercase;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.473);
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.container > .header,
+.container > .content,
+.container > .side-bar,
+.container > .footer,
+.container > .related-post {
+    background: rgba(202, 134, 134, 0.205);
+    padding: 20px;
+    border: 1px solid rgba(161, 97, 97, 0.719);
+}
+
+.container > .header,
+.container > .footer {
+    grid-column: span 5;
+    background: rgba(15, 35, 71, 0.705);
+}
+
+.content {
+    grid-column: span 3;
+}
+
+.content > .article {
+    background: rgba(155, 113, 113, 0.555);
+    padding: 20px;
+    margin-top: 5px;
+}
+
+.article h1,
+.article p {
+    margin: 5px;
+}
+
+
+
+
+
+.side-bar {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+    justify-items: center;
+}
+
+.side-bar div p{
+    text-align: center;
+}
+
+.side-bar div img {
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+.container > .related-post {
+    background: rgba(223, 175, 175, 0.534);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 600ms ease;
+}
+
+.container > .related-post:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 139, 0.418);
+    background: rgba(0, 60, 139, 0.541);
+}
+
+img {
+    width: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .header {
+        text-align: center;
+    }
+
+    .container .content {
+        grid-column: 1/-1;
+    }
+
+    .container .side-bar {
+        grid-column: 1/-1;
+
+    }
+
+    .container .side-bar div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container .side-bar div p {
+        align-self: center;
+        justify-self: center;
+    }
+
+}
